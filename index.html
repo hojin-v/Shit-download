@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Shit! — 갤럭시 카메라 셔터음 무음</title>
+<meta name="description" content="갤럭시 카메라의 강제 셔터음을 PC 없이 폰에서 버튼 하나로 끄는 앱. Android 11 이상.">
+<meta name="theme-color" content="#F6F7F9">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Shit! — 갤럭시 카메라 셔터음 무음">
+<meta property="og:description" content="PC 없이 폰에서 버튼 하나로. Android 11 이상.">
+<meta property="og:image" content="assets/icon.png">
+<meta name="twitter:card" content="summary">
+
+<link rel="icon" href="assets/icon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<main>
+
+  <header class="hero">
+    <!-- The app's own screen: one green circle carrying the wordmark, on a light ground. -->
+    <div class="badge">
+      <div class="badge-halo">
+        <div class="badge-circle">
+          <img src="assets/wordmark-light.png" alt="Shit!" width="512" height="183">
+        </div>
+      </div>
+    </div>
+
+    <h1>셔터음, 버튼 하나로</h1>
+    <p class="lede">
+      갤럭시는 카메라 셔터음을 끌 수 없게 막아 두었습니다.<br>
+      이 앱은 그 설정을 폰에서 직접 바꿉니다. PC도 루팅도 필요하지 않습니다.
+    </p>
+
+    <a class="download" id="download" href="https://github.com/hojin-v/Shit/releases/latest">
+      <span class="download-main">APK 다운로드</span>
+      <span class="download-sub" id="download-sub">최신 버전 확인 중...</span>
+    </a>
+
+    <p class="req">Android 11 이상 · 삼성 갤럭시</p>
+  </header>
+
+  <section class="features">
+    <article class="card">
+      <span class="mark">1</span>
+      <h2>PC가 필요하지 않습니다</h2>
+      <p>
+        셔터음 설정은 시스템이 잠가 두어 앱이 직접 쓸 수 없습니다.
+        그래서 이 앱은 폰이 <b>자기 자신의 무선 디버깅에 접속해</b> 설정을 바꿉니다.
+        지금까지 PC에 연결해야 했던 일을 폰 안에서 끝냅니다.
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="mark">2</span>
+      <h2>이후에는 버튼 하나뿐</h2>
+      <p>
+        최초 1회 허가만 앱 안내에 따라 받으면, 남는 것은 화면 가운데 원형 버튼 하나입니다.
+        눌러서 끄고 눌러서 켭니다. 필요한 순간에만 앱이 알아서 준비하고 <b>원래대로 되돌립니다.</b>
+      </p>
+    </article>
+
+    <article class="card">
+      <span class="mark">3</span>
+      <h2>셔터음이 되살아나도</h2>
+      <p>
+        폰 소프트웨어 업데이트나 설정 초기화로 셔터음이 다시 켜지는 일이 있습니다.
+        그때도 <b>버튼 한 번</b>이면 됩니다. 처음 설정을 다시 할 필요는 없습니다.
+      </p>
+    </article>
+  </section>
+
+  <footer>
+    <a href="https://github.com/hojin-v/Shit">소스 코드</a>
+    <span aria-hidden="true">·</span>
+    <a href="https://github.com/hojin-v/Shit/releases">모든 버전</a>
+  </footer>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
