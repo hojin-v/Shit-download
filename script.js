@@ -8,8 +8,8 @@
 (function () {
   "use strict";
 
-  var RELEASES_API = "https://api.github.com/repos/hojin-v/Shit/releases?per_page=20";
-  var RELEASES_PAGE = "https://github.com/hojin-v/Shit/releases";
+  var RELEASES_API = "https://api.github.com/repos/hojin-v/Shit-download/releases?per_page=20";
+  var RELEASES_PAGE = "https://github.com/hojin-v/Shit-download/releases";
 
   /** Matches the app's own rule for a version tag, so the page never offers what it would not. */
   var VERSION_TAG = /^v?(\d+)\.(\d+)(?:\.(\d+))?$/;

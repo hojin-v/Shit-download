@@ -10,8 +10,8 @@
  * better one than a stack trace.
  */
 
-const RELEASES_API = "https://api.github.com/repos/hojin-v/Shit/releases?per_page=20";
-const RELEASES_PAGE = "https://github.com/hojin-v/Shit/releases";
+const RELEASES_API = "https://api.github.com/repos/hojin-v/Shit-download/releases?per_page=20";
+const RELEASES_PAGE = "https://github.com/hojin-v/Shit-download/releases";
 
 /** The app's own rule for a version tag, so this never offers a release the app would not. */
 const VERSION_TAG = /^v?(\d+)\.(\d+)(?:\.(\d+))?$/;
