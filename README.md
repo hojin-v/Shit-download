@@ -1,6 +1,6 @@
-# Shit! Download Page
+# 쉿! Download Page
 
-Shit! APK를 받는 정적 페이지이고, 릴리스가 올라오는 곳입니다. 다운로드와 소개, 그것뿐입니다.
+쉿! APK를 받는 정적 페이지이고, 릴리스가 올라오는 곳입니다. 다운로드와 소개, 그것뿐입니다.
 
 ## Local preview
 
@@ -46,3 +46,7 @@ APK는 **이 저장소의 Releases**에 올라옵니다. 소스는 비공개 저
 색과 형태는 앱의 `Palette.kt`에서 그대로 가져왔습니다. 밝은 바닥, 흰 둥근 카드, 하나의 초록. 히어로의 원형 배지는 앱을 열면 보이는 그 버튼입니다.
 
 앱이 의도적으로 라이트 전용이라 이 페이지도 다크 팔레트를 따로 만들지 않았습니다.
+
+## 개인정보처리방침
+
+`privacy/shit.html`은 shit의 `play/privacy-policy.html`과 같은 공개용 문서입니다. 배포 후 `https://hnode.me/privacy/shit` 주소를 Play Console에 등록하세요. 공개 여부는 직접 URL을 열어 확인합니다.
