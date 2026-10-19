@@ -1,52 +1,129 @@
-# 쉿! Download Page
+<p align="center">
+  <a href="https://shit.ive.codes/">
+    <img src="assets/icon.png" alt="쉿! 앱 아이콘" width="144" height="144">
+  </a>
+</p>
 
-쉿! APK를 받는 정적 페이지이고, 릴리스가 올라오는 곳입니다. 다운로드와 소개, 그것뿐입니다.
+<h1 align="center">쉿! — 갤럭시 무음 설정</h1>
 
-## Local preview
+<p align="center">
+  <b>셔터음, 버튼 하나로.</b><br>
+  PC도 루팅도 없이, 갤럭시 카메라의 셔터음 설정을<br>
+  폰에서 직접 바꾸는 Android 앱입니다.
+</p>
 
-```bash
-python3 -m http.server 8000    # http://localhost:8000
-```
+<p align="center">
+  <a href="https://shit.ive.codes/"><b>웹사이트</b></a> ·
+  <a href="https://shit.ive.codes/api/latest-apk"><b>APK 다운로드</b></a> ·
+  <a href="https://github.com/hojin-v/Shit-download/releases">업데이트 소식</a> ·
+  <a href="https://shit.ive.codes/privacy/shit">개인정보처리방침</a>
+</p>
 
-`index.html`을 파일로 바로 열어도 됩니다. `/api/latest-apk`는 배포 환경에서만 동작하고, 그 경우 버튼은 스크립트가 채우거나 릴리스 페이지로 남습니다.
+<p align="center">
+  <img src="https://img.shields.io/badge/Android-11%2B-3DDC84?style=flat-square" alt="Android 11 이상">
+  <img src="https://img.shields.io/badge/Samsung-Galaxy-16A34A?style=flat-square" alt="삼성 갤럭시용">
+  <a href="https://github.com/hojin-v/Shit-download/releases/latest"><img src="https://img.shields.io/github/v/release/hojin-v/Shit-download?label=release&amp;color=16A34A&amp;style=flat-square" alt="최신 정식 버전"></a>
+</p>
 
-## Deploy
+## 셔터음 설정을 폰 안에서 끝내기
 
-[Vercel](https://vercel.com/) 정적 사이트 + Serverless Function 기준입니다.
+카메라 셔터음을 바꾸려는데 PC를 준비하고, 케이블을 연결하고, 설정 방법을 찾아야 한다면 작은 설정 하나가 번거로운 작업이 됩니다. 폰 업데이트 후 셔터음이 다시 켜지면 같은 과정을 반복해야 하기도 합니다.
+
+쉿!은 **갤럭시 사용자 스스로 셔터음 설정을 바꾸고, 필요할 때 다시 되돌릴 수 있게 하자**는 생각에서 출발했습니다. 폰이 자기 자신의 무선 디버깅에 연결하는 방식으로 PC에서 하던 설정 변경을 기기 안에서 처리합니다.
+
+최초 연결과 허가를 마치면, 평소에 할 일은 **화면 가운데 버튼을 눌러 무음과 유음을 전환하는 것**입니다.
+
+## 기획 의도
+
+| 사용자가 겪는 번거로움 | 쉿!이 줄이려는 과정 |
+| --- | --- |
+| 설정 하나를 바꾸기 위해 PC와 케이블을 준비해야 합니다. | 무선 디버깅으로 폰 안에서 설정을 변경합니다. |
+| 사용할 때마다 복잡한 설정을 다시 따라 해야 합니다. | 최초 연결은 안내에 따라 진행하고, 이후 조작은 버튼 하나로 모읍니다. |
+| 연결을 기다리는 동안 앱이 멈춘 것처럼 보일 수 있습니다. | 버튼 애니메이션으로 처리 중임을 보여줍니다. |
+| 업데이트나 설정 초기화 뒤 셔터음이 다시 켜질 수 있습니다. | 앱에서 다시 적용할 수 있게 해 반복 설정의 부담을 줄입니다. |
+
+초기 연결을 마친 뒤에는 설정 변경에 필요한 연결 과정을 앱이 처리하고, 사용자는 원하는 셔터음 상태를 선택하는 데 집중하도록 구성했습니다.
+
+## 이렇게 사용합니다
+
+1. **처음 한 번, 연결 준비** — Wi-Fi에 연결하고 앱 안내에 따라 개발자 옵션과 무선 디버깅을 설정합니다. 설정 변경 동의와 페어링을 진행합니다.
+2. **버튼으로 무음 적용** — 초기 설정이 끝나면 메인 화면의 원형 버튼을 누릅니다. 앱이 필요한 연결과 설정 변경을 처리합니다.
+3. **필요하면 유음으로 전환** — 같은 버튼으로 셔터음을 다시 켭니다. 이후 폰 업데이트 등으로 설정이 바뀌면 앱에서 다시 적용합니다.
+
+페어링은 취소할 수 있으며 시간 제한이 있습니다. 연결이 완료되지 않으면 앱 안내에 따라 다시 시도하세요.
+
+## 앱과 소개 페이지가 같은 인상을 주도록
+
+밝은 배경, 흰색 둥근 카드, 초록색 원형 버튼을 중심으로 구성했습니다. 앱에서 무음 상태를 나타내는 초록색과 원형 버튼을 소개 페이지에도 사용해, 다운로드 전에 본 모습이 앱을 처음 열었을 때의 경험으로 이어지도록 했습니다.
+
+페이지의 색상은 앱의 `Palette.kt`를 기준으로 하고, 로고와 아이콘은 이 저장소의 원본 에셋을 사용합니다. 앱과 페이지 모두 라이트 화면을 기준으로 디자인했습니다.
+
+## 설치와 업데이트
+
+**Android 11 이상을 사용하는 삼성 갤럭시**를 대상으로 합니다. 무선 디버깅을 사용할 수 있는 Wi-Fi 연결이 필요합니다.
+
+1. [APK 다운로드](https://shit.ive.codes/api/latest-apk)를 눌러 최신 정식 버전을 받습니다.
+2. 받은 APK를 열고 Android 설치 화면의 안내에 따라 설치합니다.
+3. 앱을 실행해 초기 연결과 설정 변경 동의를 진행합니다.
+
+기존 GitHub APK 사용자는 새 버전의 APK를 받아 설치해 업데이트할 수 있습니다. 이전 버전과 버전별 변경 내용은 [릴리스 목록](https://github.com/hojin-v/Shit-download/releases)에서 확인하세요.
+
+<details>
+<summary><b>무선 디버깅이 켜지지 않을 때</b></summary>
+
+Wi-Fi 연결과 갤럭시의 **보안 위험 자동 차단(Auto Blocker)** 설정을 확인하세요. 보안 위험 자동 차단이 켜져 있으면 무선 디버깅을 사용할 수 없습니다. 앱의 안내에서 보안 설정으로 이동해 해당 항목을 확인할 수 있습니다.
+
+</details>
+
+<details>
+<summary><b>Google Play 배포판과 개인정보처리방침</b></summary>
+
+Google Play 배포판과 이 저장소의 GitHub APK 배포판은 별도로 관리합니다. 이 README의 다운로드 링크는 GitHub APK를 제공합니다.
+
+공개된 [개인정보처리방침](https://shit.ive.codes/privacy/shit)은 **Google Play 배포판**에 적용됩니다. 연결 인증 정보와 설정값의 처리, 보관 및 삭제 방법은 해당 문서에서 확인할 수 있습니다.
+
+</details>
+
+## 이 저장소의 역할
+
+이 저장소는 **쉿!의 소개 페이지와 공개 APK 배포 창구**입니다. 앱 소스는 비공개 저장소에서 관리하고, 빌드한 APK와 변경 내용은 이곳의 [Releases](https://github.com/hojin-v/Shit-download/releases)에 게시합니다. 사용자는 별도의 GitHub 인증 없이 APK를 받고, 앱도 이 공개 릴리스에서 업데이트를 확인합니다.
+
+<details>
+<summary><b>페이지 구성과 로컬 미리보기</b></summary>
 
 | 파일 | 역할 |
 | --- | --- |
-| `index.html` `styles.css` `script.js` | 페이지 |
-| `assets/` | 로고, 아이콘 |
-| `api/latest-apk.js` | 최신 APK로 302 redirect |
-| `vercel.json` | cleanUrls, 에셋 캐시 |
+| `index.html` · `styles.css` · `script.js` | 앱 소개와 다운로드 페이지 |
+| `assets/icon.png` · `assets/wordmark-light.png` | 앱 아이콘과 로고 |
+| `api/latest-apk.js` | 최신 설치 가능 APK로 연결하는 다운로드 주소 |
+| `privacy/shit.html` | Google Play 배포판의 공개 개인정보처리방침 |
+| `vercel.json` | URL과 에셋 캐시 설정 |
 
-배포 후 `https://<도메인>/api/latest-apk`는 GitHub Releases에서 설치 가능한 최신 APK를 찾아 그 asset으로 redirect합니다. 릴리스가 나갈 때 이 저장소를 손댈 필요는 없습니다.
+저장소 루트에서 실행한 뒤 `http://localhost:8000`을 엽니다.
 
-## APK
+```bash
+python3 -m http.server 8000
+```
 
-APK는 **이 저장소의 Releases**에 올라옵니다. 소스는 비공개 저장소(`hojin-v/Shit`)에 있고, 그쪽 CI가 태그를 받아 빌드한 뒤 결과물만 여기로 릴리스합니다.
+`index.html`을 브라우저에서 직접 열어도 됩니다. `/api/latest-apk`는 Vercel 배포 환경에서 동작합니다. 로컬 페이지의 다운로드 버튼은 브라우저에서 릴리스를 조회해 갱신하며, 조회하지 못하면 GitHub 릴리스 목록으로 연결합니다.
 
-이렇게 나눈 이유는 하나입니다. 소스는 가려도 되지만 **사용자가 설치하는 것은 토큰 없이 닿을 수 있어야** 합니다. 앱의 업데이트 확인도 이 저장소를 익명으로 조회합니다. 앞단에 프록시를 두거나 APK에 자격증명을 심는 방법은, 심는 순간 누구나 꺼낼 수 있어서 성립하지 않습니다.
+</details>
 
-릴리스에 관여하는 토큰은 소스 저장소의 Actions secret `RELEASE_TOKEN` 하나뿐이고, 빌드가 도는 동안에만 존재합니다.
+<details>
+<summary><b>배포와 최신 APK 연결 방식</b></summary>
 
-받을 수 있는 릴리스로 인정하는 조건은 앱 안의 업데이트 확인과 같습니다.
+[Vercel](https://vercel.com/)의 정적 사이트와 Serverless Function으로 배포합니다. `/api/latest-apk`는 GitHub Releases에서 설치 가능한 최신 정식 APK를 찾아 `302` 리다이렉트하므로, 새 릴리스마다 다운로드 주소를 바꿀 필요가 없습니다.
 
-- `draft`도 `prerelease`도 아님
-- 태그가 `v1.2.3` 또는 `v1.2` 형식
-- `.apk` asset이 붙어 있고 URL이 `https://`
+다운로드 대상으로 인정하는 조건은 다음과 같습니다.
 
-태그는 CI가 APK를 올리기 전에 먼저 푸시되므로, 받을 것이 없는 릴리스가 잠시 존재할 수 있습니다. asset 조건이 그걸 걸러냅니다.
+- `draft`와 `prerelease`가 아닌 공개 릴리스
+- `v2.1.0` 또는 `v2.1`처럼 숫자로 구성된 버전 태그(`v`는 생략 가능)
+- HTTPS 다운로드 URL을 가진 `.apk` 첨부 파일이 있음
 
-버튼은 스크립트 없이도 릴리스 페이지로 동작하고, 스크립트가 응답을 받으면 버전과 파일 크기를 채워 직접 링크로 바꿉니다. 실패하면 릴리스 페이지로 남습니다 — 오래된 버전을 보여주지는 않습니다.
+조건을 만족하는 릴리스 중 버전 번호가 가장 높은 APK를 연결합니다. 아직 APK가 첨부되지 않은 릴리스는 제외하고, 조회에 실패하면 릴리스 목록으로 이동합니다. 페이지의 다운로드 버튼도 같은 기준으로 버전과 파일 크기를 표시합니다.
 
-## Design
+APK는 비공개 소스 저장소의 CI에서 빌드해 이 저장소로 게시합니다. 릴리스 게시용 `RELEASE_TOKEN`은 소스 저장소의 Actions secret으로 관리하며 빌드 중에만 사용합니다.
 
-색과 형태는 앱의 `Palette.kt`에서 그대로 가져왔습니다. 밝은 바닥, 흰 둥근 카드, 하나의 초록. 히어로의 원형 배지는 앱을 열면 보이는 그 버튼입니다.
+`privacy/shit.html`은 앱 소스의 `play/privacy-policy.html`과 맞춰 관리하는 공개 문서입니다. Play Console에 등록하는 개인정보처리방침 주소는 `https://hnode.me/privacy/shit`입니다.
 
-앱이 의도적으로 라이트 전용이라 이 페이지도 다크 팔레트를 따로 만들지 않았습니다.
-
-## 개인정보처리방침
-
-`privacy/shit.html`은 shit의 `play/privacy-policy.html`과 같은 공개용 문서입니다. 배포 후 `https://hnode.me/privacy/shit` 주소를 Play Console에 등록하세요. 공개 여부는 직접 URL을 열어 확인합니다.
+</details>
